@@ -1,10 +1,19 @@
-import Assignment3 from "./a3";
+import JavaScript from "./java-script";
+import Classes from "./classes";
+import Styles from "./styles";
+import ConditionalOutput from "./conditional-output/index";
+import TodoList from "./todo/todo-list";
 
 function Assignment3() {
-    return (
-      <div>
-        <Assignment3/>
-      </div>
+ return (
+   <div>
+     <h1>Assignment 3</h1>
+      <TodoList/>
+     <ConditionalOutput/>
+     <Styles/>
+      <Classes/>
+     <JavaScript/>
+   </div>
  );
 }
-export default Assignment3;   
+export default Assignment3;

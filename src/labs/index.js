@@ -1,8 +1,12 @@
+import Assignment3 from "./a3";
+import Nav from "../nav";
+
 function Labs() {
     return(
-       <div>
-          <h1>Assignment 3</h1>
-       </div>
+        <div>
+            <Nav/>
+            <Assignment3/>
+        </div>
     );
- }
- export default Labs;
+}
+export default Labs;
