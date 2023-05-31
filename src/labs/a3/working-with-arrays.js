@@ -5,6 +5,7 @@ import JsonStringify from "./json-stringify";
 import FindFunction from "./find-function";
 import FindIndex from "./find-index";
 import FilterFunction from "./filter-function";
+import ForLoops from "./for-loops";
 
 function WorkingWithArrays() {
     var functionScoped = 2;
@@ -26,6 +27,7 @@ function WorkingWithArrays() {
             variableArray1 = {variableArray1}<br/>
             <ArrayIndexAndLength/>
             <AddingAndRemovingDataToFromArrays/>
+            <ForLoops/>
             <MapFunction/>
             <JsonStringify/>
             <FindFunction/>
