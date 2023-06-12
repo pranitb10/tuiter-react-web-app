@@ -1,0 +1,21 @@
+[
+    {
+      "_id": 123,
+      "userName": "NASA",
+      "handle": "NASA",
+      "avatarIcon": "https://th.bing.com/th/id/OIP.7HdKdZHNfDgz7832n2aLZAHaHg?pid=ImgDet&rs=1"
+    },
+    {
+      "_id": 234,
+      "userName": "Tesla",
+      "handle": "tesla",
+      "avatarIcon": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png"
+    },
+    {
+      "_id": 345,
+      "userName": "SpaceX",
+      "handle": "SpaceX",
+      "avatarIcon": "https://logodix.com/logo/355.jpg"
+    }
+]
+   
