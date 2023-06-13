@@ -1,11 +1,10 @@
 import React from "react";
 import '../../vendors/bootstrap-icons/font/bootstrap-icons.min.css';
+import '..'
 import {useDispatch} from "react-redux";
 import './tuit.css';
-import TuitStates from "./tuit-states";
+import TuitStates from "./tuit-stats";
 import {deleteTuitThunk} from "../services/tuits-thunks";
-
-
 
 const TuitItem = (
  {
