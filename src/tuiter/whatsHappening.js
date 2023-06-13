@@ -1,30 +1,27 @@
 import React, {useState} from "react";
-import { AiOutlinePicture} from 'react-icons/ai';
-import { MdFormatListBulleted} from 'react-icons/md';
-import { HiOutlineLocationMarker} from 'react-icons/hi';
-import { BiBold} from 'react-icons/bi';
-import { BiItalic} from 'react-icons/bi';
-import { HiOutlineGif } from 'react-icons/hi2';
-import { BsEmojiSmile } from 'react-icons/bs';
-import { TbCalendarStats } from 'react-icons/tb'
-import {createTuit} from "./reducers/tuits-reducer";
+import { AiOutlinePicture} from '@react-icons/all-files/ai/AiOutlinePicture';
+import { MdFormatListBulleted} from '@react-icons/all-files/md/MdFormatListBulleted';
+import { HiOutlineLocationMarker} from '@react-icons/all-files/hi/HiOutlineLocationMarker';
+import { BiBold} from '@react-icons/all-files/bi/BiBold';
+import { BiItalic} from '@react-icons/all-files/bi/BiItalic';
+import {createTuitThunk} from "./services/tuits-thunks";
 import {useDispatch} from "react-redux";
 
 const WhatsHappening = () => {
  let [whatsHappening, setWhatsHappening] = useState('');
  const dispatch = useDispatch();
  const tuitClickHandler = () => {
+    const newTuit = {
+        tuit: whatsHappening
+      }
+      dispatch(createTuitThunk(newTuit));
+      setWhatsHappening("");
    console.log(whatsHappening);
-   const newTuit = {
-    tuit: whatsHappening
-  }
-  dispatch(createTuit(newTuit));
-  setWhatsHappening("");
  }
  return (
    <div className="row">
      <div className="col-auto">
-       <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" width={60}/>
+       <img src="https://th.bing.com/th/id/R.dfe000c4d39e10adeac73e968d0081c0?rik=2qecWrg5GwkLaA&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fnasa-logo-png-nasa-logo-1664.png&ehk=d%2bgvuoNz%2b0udsBSxL%2bAGF0N%2f1tWoj4H6GaKOJhRCIyQ%3d&risl=&pid=ImgRaw&r=0" width={60}/>
      </div>
      <div className="col-10">
        <textarea value={whatsHappening} placeholder="What's happening?"
@@ -38,13 +35,10 @@ const WhatsHappening = () => {
          </button>
          <div className="text-primary fs-2">
            <AiOutlinePicture className="me-3"></AiOutlinePicture>
-           <HiOutlineGif className="me-3"></HiOutlineGif>
            <MdFormatListBulleted className="me-3"></MdFormatListBulleted>
-           <BsEmojiSmile className="me-3"></BsEmojiSmile>
-            {/* <TbCalendarStats className="me-3"></TbCalendarStats> */}
            <HiOutlineLocationMarker className="me-3"></HiOutlineLocationMarker>
-           {/* <BiBold className="me-3"></BiBold> */}
-           {/* <BiItalic className="me-3"></BiItalic> */}
+           <BiBold className="me-3"></BiBold>
+           <BiItalic className="me-3"></BiItalic>
          </div>
        </div>
      </div>
