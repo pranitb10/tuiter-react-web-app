@@ -22,7 +22,7 @@ console.log("profile" , profile)
      <h1>Profile Screen</h1>
      {profile && (<div>
        <div>
-        <label>First Name</label>
+        <label style={{marginRight: 10, marginBottom: 10}}>First Name</label>
         <input type="text" value={profile.firstName}
          onChange={(event) => {
           const newProfile = {
@@ -32,7 +32,7 @@ console.log("profile" , profile)
          }}/>
        </div>
        <div>
-        <label>Last Name</label>
+        <label style={{marginRight: 10, marginBottom: 10}}>Last Name</label>
         <input type="text" value={profile.lastName}
          onChange={(event) => {
           const newProfile = {
@@ -42,12 +42,12 @@ console.log("profile" , profile)
          }}/>
        </div></div>
      )}
-     <button
+     <button style={{marginRight: 10, marginTop: 10}}
       onClick={() => {
         dispatch(logoutThunk());
         navigate("/tuiter/login");
       }}>                   Logout</button>
-     <button onClick={save}>Save  </button>
+     <button style={{marginLeft: 10, marginTop: 10}} onClick={save}>Save  </button>
     </div> );
 }
 

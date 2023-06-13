@@ -14,7 +14,7 @@ const NavigationSidebar = () => {
                 {name : "bookmarks", image : "fa-bookmark"}, {name : "lists", image : "fa-list"}, {name : "more", image : "fa-ellipsis"}];
   console.log("user : ", currentUser)
  return (
-   <div className="list-group">
+   <div className="list-group" style={{"width": "100%"}}>
      {!currentUser && <Link className={`list-group-item ${active === "login" ? "active" : ""}`} to="/tuiter/login">   Login   </Link>}
      {!currentUser && <Link className={`list-group-item ${active === "register" ? "active" : ""}`} to="/tuiter/register">Register</Link>}
      { currentUser && <Link className={`list-group-item ${active === "profile" ? "active" : ""}`} to="/tuiter/profile"> Profile </Link>}
