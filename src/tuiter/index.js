@@ -13,7 +13,8 @@ import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
 import LoginScreen from "./user/login-screen";
 import RegisterScreen from "./user/register-screen";
-import authReducer from "./reducers/auth-reducer";
+import authReducer from "./reducers/auth-reducers";
+
 const store = configureStore(
   {reducer: {who: whoReducer,  tuits: tuitsReducer, user:  authReducer}});
 
@@ -45,4 +46,5 @@ function Tuiter() {
    </Provider>
  );
 }
+
 export default Tuiter;

@@ -27,5 +27,3 @@ const TuitSummaryItem = (
  );
 };
 export default TuitSummaryItem;
-
-//comment

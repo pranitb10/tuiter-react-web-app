@@ -34,7 +34,7 @@ function LoginScreen() {
        Login
      </button>
     </div>
-   );
-  
+   );  
 }
+
 export default LoginScreen;
